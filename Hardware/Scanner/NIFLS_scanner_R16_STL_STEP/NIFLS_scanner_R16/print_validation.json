@@ -1,0 +1,527 @@
+[
+  {
+    "part": "01_pi_base",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 72622,
+    "print_dimensions_mm": [
+      120.0,
+      94.0,
+      31.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 1.4988010832439613e-14,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 155,
+    "slicer_estimated_time": [
+      "7h 59m 3s"
+    ]
+  },
+  {
+    "part": "02_pi_lid",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 9356,
+    "print_dimensions_mm": [
+      120.0,
+      94.0,
+      6.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 6.725904928221293e-15,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 30,
+    "slicer_estimated_time": [
+      "3h 46m 44s"
+    ]
+  },
+  {
+    "part": "03_camera_bulkhead",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 17312,
+    "print_dimensions_mm": [
+      74.0,
+      94.0,
+      13.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 1.942890293094024e-15,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 65,
+    "slicer_estimated_time": [
+      "3h 17m 26s"
+    ]
+  },
+  {
+    "part": "04_contact_hood_35mm",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 9434,
+    "print_dimensions_mm": [
+      74.0,
+      94.0,
+      51.6
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 8.881784197001252e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 258,
+    "slicer_estimated_time": [
+      "4h 32m 7s"
+    ]
+  },
+  {
+    "part": "05_filter_carrier_zomei_33x6",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 3042,
+    "print_dimensions_mm": [
+      51.0,
+      50.998,
+      9.9
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -1.9984013913857226e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 49,
+    "slicer_estimated_time": [
+      "59m 7s"
+    ]
+  },
+  {
+    "part": "06_filter_retainer",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 3924,
+    "print_dimensions_mm": [
+      43.492,
+      50.998,
+      5.5
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -1.9984013913857226e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 27,
+    "slicer_estimated_time": [
+      "33m 57s"
+    ]
+  },
+  {
+    "part": "07_grip_insert_half",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 10600,
+    "print_dimensions_mm": [
+      45.0,
+      127.0,
+      19.3
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 0.0,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 96,
+    "slicer_estimated_time": [
+      "3h 39m 32s"
+    ]
+  },
+  {
+    "part": "08_grip_screw_half",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 11220,
+    "print_dimensions_mm": [
+      45.0,
+      127.0,
+      17.5
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 1.0000000116860974e-07,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 88,
+    "slicer_estimated_time": [
+      "4h 14m 48s"
+    ]
+  },
+  {
+    "part": "09_angled_saddle",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 8224,
+    "print_dimensions_mm": [
+      100.0,
+      42.0,
+      26.423
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 6.725811754597095e-15,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 132,
+    "slicer_estimated_time": [
+      "3h 26m 57s"
+    ]
+  },
+  {
+    "part": "10_alignment_key_print_2",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 12,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      4.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 0.0,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 20,
+    "slicer_estimated_time": [
+      "5m 13s"
+    ]
+  },
+  {
+    "part": "11_insert_fit_coupon",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 12104,
+    "print_dimensions_mm": [
+      54.0,
+      16.0,
+      8.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 3.885780586188048e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 40,
+    "slicer_estimated_time": [
+      "33m 50s"
+    ]
+  },
+  {
+    "part": "12_button_backplate",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 10702,
+    "print_dimensions_mm": [
+      30.0,
+      33.0,
+      7.5
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 1.4432899320127035e-15,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 37,
+    "slicer_estimated_time": [
+      "39m 52s"
+    ]
+  },
+  {
+    "part": "13_button_pod",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 6988,
+    "print_dimensions_mm": [
+      30.0,
+      33.0,
+      17.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 1.0658141036401503e-14,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 85,
+    "slicer_estimated_time": [
+      "1h 7m 45s"
+    ]
+  },
+  {
+    "part": "14_button_cap",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 2894,
+    "print_dimensions_mm": [
+      18.0,
+      17.994,
+      6.5
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -7.216449660063518e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 32,
+    "slicer_estimated_time": [
+      "7m 33s"
+    ]
+  },
+  {
+    "part": "15_switch_cradle",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 3100,
+    "print_dimensions_mm": [
+      9.8,
+      24.0,
+      6.55
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -1.9984013913857226e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 33,
+    "slicer_estimated_time": [
+      "9m 32s"
+    ]
+  },
+  {
+    "part": "16_switch_shim_0p4_print_2",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 1008,
+    "print_dimensions_mm": [
+      8.0,
+      7.998,
+      0.4
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -1.7763568394002505e-15,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 2,
+    "slicer_estimated_time": [
+      "15s"
+    ]
+  },
+  {
+    "part": "17_tof_cradle",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 5492,
+    "print_dimensions_mm": [
+      8.499,
+      51.0,
+      18.3
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -3.8847485294813777e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 91,
+    "slicer_estimated_time": [
+      "28m 19s"
+    ]
+  },
+  {
+    "part": "18_tof_edge_clamp_print_2",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 1524,
+    "print_dimensions_mm": [
+      7.6,
+      7.699,
+      4.7
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 1.3544720688668673e-15,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 23,
+    "slicer_estimated_time": [
+      "2m 15s"
+    ]
+  },
+  {
+    "part": "19_power_pod",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 6840,
+    "print_dimensions_mm": [
+      28.0,
+      77.597,
+      6.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -5.32884467804119e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 30,
+    "slicer_estimated_time": [
+      "43m 27s"
+    ]
+  },
+  {
+    "part": "20_power_panel",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 12432,
+    "print_dimensions_mm": [
+      28.0,
+      58.0,
+      9.0
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 9.999998695775503e-08,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 45,
+    "slicer_estimated_time": [
+      "51m 9s"
+    ]
+  },
+  {
+    "part": "21_led_retainer",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 3544,
+    "print_dimensions_mm": [
+      21.598,
+      7.6,
+      7.7
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -4.2175361277545676e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 38,
+    "slicer_estimated_time": [
+      "8m 32s"
+    ]
+  },
+  {
+    "part": "22_battery_roof",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 8448,
+    "print_dimensions_mm": [
+      120.0,
+      94.0,
+      7.64
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 8.769231136596459e-14,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 38,
+    "slicer_estimated_time": [
+      "4h 44m 54s"
+    ]
+  },
+  {
+    "part": "23_battery_tray",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 18444,
+    "print_dimensions_mm": [
+      114.0,
+      94.0,
+      35.16
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": 7.105427357601002e-15,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 176,
+    "slicer_estimated_time": [
+      "9h 19m 0s"
+    ]
+  },
+  {
+    "part": "24_battery_rear_cover",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 4180,
+    "print_dimensions_mm": [
+      33.06,
+      94.0,
+      13.1
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -3.441691270458867e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 66,
+    "slicer_estimated_time": [
+      "1h 27m 53s"
+    ]
+  },
+  {
+    "part": "25_connector_access_cover",
+    "watertight": true,
+    "winding_consistent": true,
+    "mesh_components": 1,
+    "triangles": 4060,
+    "print_dimensions_mm": [
+      53.4,
+      29.46,
+      6.7
+    ],
+    "positive_volume": true,
+    "minimum_z_mm": -3.4374129599818446e-16,
+    "within_mini_build_volume": true,
+    "prusaslicer_returncode": 0,
+    "sliced_successfully": true,
+    "layer_count": 33,
+    "slicer_estimated_time": [
+      "43m 20s"
+    ]
+  }
+]

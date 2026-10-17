@@ -1,0 +1,111 @@
+{
+  "units": "mm",
+  "glass_thickness": 6.0,
+  "board_to_glass": 18.0,
+  "led_count": 99,
+  "resistor_count": 33,
+  "purchased_holder_count": 2,
+  "holder_envelope_mm": [
+    63,
+    31,
+    31
+  ],
+  "overall_body_height_mm": 75,
+  "led_pitch": [
+    13.5,
+    16.5
+  ],
+  "resistor_pitch": 10.0,
+  "parts": {
+    "01_diffuser_frame": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 92567.11827748791,
+      "bounding_box_mm": [
+        174.0,
+        174.0,
+        14.0
+      ],
+      "step_roundtrip_valid": true
+    },
+    "02_LED_substrate": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 43233.591199217735,
+      "bounding_box_mm": [
+        148.0,
+        148.0,
+        2.0
+      ],
+      "step_roundtrip_valid": true
+    },
+    "03_base_for_two_4AA_holders": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 272996.8246869245,
+      "bounding_box_mm": [
+        174.0,
+        174.0,
+        64.0
+      ],
+      "step_roundtrip_valid": true
+    },
+    "04_sliding_battery_door": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 94874.54239169342,
+      "bounding_box_mm": [
+        156.0,
+        166.5,
+        9.0
+      ],
+      "step_roundtrip_valid": true
+    }
+  },
+  "interferences_mm3": {
+    "01_diffuser_frame / 02_LED_substrate": 0.0,
+    "01_diffuser_frame / 03_base_for_two_4AA_holders": 0.0,
+    "01_diffuser_frame / 04_sliding_battery_door": 0.0,
+    "01_diffuser_frame / glass_reference": 0.0,
+    "02_LED_substrate / 03_base_for_two_4AA_holders": 0.0,
+    "02_LED_substrate / 04_sliding_battery_door": 0.0,
+    "02_LED_substrate / glass_reference": 0.0,
+    "03_base_for_two_4AA_holders / 04_sliding_battery_door": 0.0,
+    "03_base_for_two_4AA_holders / glass_reference": 0.0,
+    "04_sliding_battery_door / glass_reference": 0.0
+  },
+  "switch_revision": {
+    "opening_mm": [
+      23.4,
+      12.4
+    ],
+    "wall_mm": 3,
+    "clearance_per_side_mm": 0.2,
+    "status": "PROVISIONAL: 23 x 12 was measured at the switch base; confirm body at mounting rim and clip engagement using coupon. Exact switch envelope and wiring not verified."
+  },
+  "door_sweep_mm3": {
+    "0": 0.0,
+    "10": 0.0,
+    "30": 0.0,
+    "60": 0.0,
+    "100": 0.0,
+    "170": 0.0
+  },
+  "continuous_door_sweep_0_to_170_mm_max_interference": 0.0,
+  "holder_checks": "Two 31 X x 63 Y x 31 Z envelopes; 0.5 mm lateral clearance, bottom Z7, top Z38, ceiling Z39.",
+  "connector_checks": "Two provisional 24 x 8 x 26 envelopes in end recesses, collision-free; actual PP3 connector and wire bend dimensions unconfirmed.",
+  "holder_insertion_checks": {
+    "-18": 0.0,
+    "18": 0.0
+  },
+  "led_envelope_checks": "99 nominal 5.8 mm flange / 5 mm body / 8.6 mm height; no enclosure interference",
+  "NIFLS_assembly.step": {
+    "valid_after_reimport": true,
+    "solid_count": 5
+  },
+  "NIFLS_assembly_with_reference_envelopes.step": {
+    "valid_after_reimport": true,
+    "solid_count": 106
+  },
+  "substrate_cylindrical_through_holes": 268
+}

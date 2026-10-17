@@ -1,0 +1,16 @@
+{
+  "from": "R15",
+  "to": "R16",
+  "changed_stl_files": [
+    "01_pi_base.stl"
+  ],
+  "unchanged_stl_count": 24,
+  "engraving_depth_mm": 0.5,
+  "font": "Arial Bold",
+  "text": [
+    "FINAL YEAR PROJECT \u2022 UCT \u2022 2026",
+    "THE FIRST OF MANY"
+  ],
+  "hardware_changes": [],
+  "validation": "Changed base checked for valid single solid, watertight mesh and slicing; identical bounds, reduced volume. Unchanged parts and prior assembly/route reports retained."
+}

@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "channel_centreline_length_mm": 81.56273949217896,
+  "nominal_bay_to_port_approach_polyline_mm": 116.56273949217896,
+  "overall_cable_budget_mm": 200,
+  "remaining_for_connectors_bends_and_slack_mm": 83.43726050782104,
+  "cable_envelope_diameter_mm": 4,
+  "channel_width_mm": 8,
+  "channel_depth_mm": 4.8,
+  "minimum_roof_floor_below_channel_mm": 2.84,
+  "tray_unchanged_volume_difference_mm3": 0.0,
+  "checks": [
+    {
+      "part": "01_pi_base",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "02_pi_lid",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "03_camera_bulkhead",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "04_contact_hood_35mm",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "06_filter_retainer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "07_grip_insert_half",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "08_grip_screw_half",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "09_angled_saddle",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "22_battery_roof",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "23_battery_tray",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "24_battery_rear_cover",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "25_connector_access_cover",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "12_button_backplate",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "13_button_pod",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "14_button_cap",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "05_filter_carrier_zomei_33x6",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "17_tof_cradle",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "18_tof_edge_clamp_print_2",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "19_power_pod",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "20_power_panel",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "21_led_retainer",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "bank",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "pi",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "key_-78",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "key_-48",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "limitations": [
+    "Polyline is a clearance/length reference, not a validated flexible cable shape.",
+    "Both connectors, strain reliefs and bend radius are unmeasured; 200 mm overall compatibility is not confirmed.",
+    "Assumed bank cable departure at (-68,26,-20) and Pi approach at (-88,-36,15).",
+    "No switch detour is included; direct cable alone does not implement the rear power switch."
+  ]
+}

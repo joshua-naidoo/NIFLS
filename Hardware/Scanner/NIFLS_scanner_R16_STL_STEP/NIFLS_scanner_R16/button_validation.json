@@ -1,0 +1,653 @@
+{
+  "passed": true,
+  "stroke_mm": 0.7,
+  "cap_diameter_mm": 14,
+  "cap_recess_mm": 1,
+  "shim_nominal_mm": 0.4,
+  "checks": [
+    {
+      "travel_mm": 0,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.1,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.2,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.3,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.4,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.5,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.6,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "switch_fixed_envelope",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "switch_pin_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "switch_pin_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "backplate_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "backplate_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "backplate_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "pod_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "pod_screw_1",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "pod_screw_2",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "pod_screw_3",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "cradle_screw_0",
+      "overlap_mm3": 0
+    },
+    {
+      "travel_mm": 0.7,
+      "part": "cradle_screw_1",
+      "overlap_mm3": 0
+    }
+  ],
+  "limitations": [
+    "Fixed switch envelope, not its moving actuator; actual switch timing requires shim calibration.",
+    "No physical print, friction or endurance test."
+  ]
+}

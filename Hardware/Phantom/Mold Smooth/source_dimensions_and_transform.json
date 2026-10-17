@@ -1,0 +1,143 @@
+{
+  "source_path": "C:\\Users\\joshu\\OneDrive - University of Cape Town\\UCT 2026\\Semester 2\\EEE4022S\\3D printing\\Phantom\\human_bone.3mf",
+  "source_sha256": "2e9acd6e3ebde1ce2cda653367486aa5842bf14f12c9e994f9f8612b0f0e3295",
+  "output_path": "C:\\Users\\joshu\\Documents\\Codex\\2026-09-10\\i\\work\\ten_mm\\bone_exact.stl",
+  "output_sha256": "5698af553c3849d1f3ef104956046e529f9c524041c17508725c934c86d1e72f",
+  "unit": "millimeter",
+  "vertex_count": 143555,
+  "triangle_count": 287102,
+  "source_build_transform_3mf_12_values": [
+    0.0323017772,
+    -0.00223174647,
+    -0.00248797542,
+    -0.00223174647,
+    0.00359251587,
+    -0.03219765,
+    0.00248797542,
+    0.03219765,
+    0.00342006445,
+    93.3194991,
+    90.8739091,
+    18.320444
+  ],
+  "build_bbox_center_mm": [
+    94.70082585908925,
+    89.68775673348821,
+    16.63263245437637
+  ],
+  "build_to_design_column_vector_4x4": [
+    [
+      1,
+      0,
+      0,
+      -94.70082585908925
+    ],
+    [
+      0,
+      1,
+      0,
+      -89.68775673348821
+    ],
+    [
+      0,
+      0,
+      1,
+      -16.63263245437637
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "raw_model_to_design_column_vector_4x4": [
+    [
+      0.0323017772,
+      -0.00223174647,
+      0.00248797542,
+      -1.381326759089248
+    ],
+    [
+      -0.00223174647,
+      0.00359251587,
+      0.03219765,
+      1.1861523665117915
+    ],
+    [
+      -0.00248797542,
+      -0.03219765,
+      0.00342006445,
+      1.687811545623628
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "design_bounds_mm": [
+    [
+      -58.798668529021924,
+      -90.00000004035444,
+      -16.63263249173904
+    ],
+    [
+      58.798668529021924,
+      90.00000004035442,
+      16.632632491739038
+    ]
+  ],
+  "design_extents_mm": [
+    117.59733705804385,
+    180.00000008070884,
+    33.265264983478076
+  ],
+  "normalization": "Applied saved 3MF build transform exactly once, then translated the resulting axis-aligned bounding-box centre to the origin. No rescaling, pose rotation, recutting or forearm extension. Binary STL float32 storage is the sole output rounding.",
+  "axis_interpretation": {
+    "longitudinal": "Wrist/carpal cut toward negative Y; fingertips toward positive Y.",
+    "thumb_side": "Negative X, inherited from the common source anatomy and saved pose.",
+    "palm_versus_dorsal": "Not inferred solely from transform metadata."
+  },
+  "shared_anatomy_mapping": {
+    "hypothesis": "new_raw / 25.4 = old_raw + delta for vertices retained from the common anatomy; current mesh is cropped proximally.",
+    "delta_mm": [
+      -4.881889026364661e-08,
+      2.3385826963817635e-07,
+      -37.962219582677164
+    ],
+    "rounded_coordinate_match_tolerance_mm": 0.001,
+    "new_vertex_count": 143555,
+    "matching_old_vertex_count": 142502,
+    "matching_fraction": 0.9926648322942426,
+    "old_centered_design_to_new_centered_design_column_vector_4x4": [
+      [
+        1.6041077016851313,
+        0.06677311167664816,
+        0.05350971909609965,
+        -2.105994539159627
+      ],
+      [
+        -0.06039506435222387,
+        1.5951292165378521,
+        -0.1799963387439404,
+        -30.82977272741762
+      ],
+      [
+        -0.0606166204611564,
+        0.17772899945001322,
+        1.5953750315260562,
+        -0.9197145484259837
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "mapping_uniform_scale": 1.6063883269869075,
+    "use_note": "This similarity can transfer the prior fitted hand skin to the new source anatomical scale. It is not a normalization of the new bone. Crop transferred forearm at the current wrist; do not add a forearm extension."
+  }
+}

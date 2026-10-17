@@ -1,0 +1,21 @@
+{
+  "method": "Rounded palm and five individual rounded digit envelopes, blended over the full hand",
+  "rounding_radius_mm": 10.25,
+  "global_fairing_sigma_mm": 1.8,
+  "digit_bone_vertex_counts": {
+    "thumb": 40101,
+    "index": 13502,
+    "middle": 13571,
+    "ring": 11788,
+    "little": 11447
+  },
+  "volume_ml": 601.5645372977392,
+  "skin_optimal_diagonal": [
+    174.29714786199617,
+    41.24,
+    [
+      174.29714786199617,
+      174.29029416882582
+    ]
+  ]
+}

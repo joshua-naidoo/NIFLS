@@ -1,0 +1,76 @@
+{
+  "method": "Independent reimport of exported binary STL and XML 3MF; triangle-coordinate comparison; Blender bmesh topology and signed volume; actual printed-coordinate bounds",
+  "parts": {
+    "01_mold_lower_MINI_DIAGONAL": {
+      "triangle_count_stl": 104228,
+      "triangle_count_3mf": 104228,
+      "zero_area_triangles_removed_by_stl_importer": 0,
+      "topology_check_note": "Topology checked after normal STL importer discards zero-area triangles and coincident vertices are welded at 0.000001 mm",
+      "max_stl_3mf_triangle_coordinate_error_mm": 7.67714843163958e-06,
+      "stl_3mf_same_triangles": true,
+      "3mf_units": "millimeter",
+      "bounds_mm": [
+        [
+          0.9165959358215332,
+          0.904755711555481,
+          0.0
+        ],
+        [
+          179.08340454101562,
+          179.09524536132812,
+          40.314186096191406
+        ]
+      ],
+      "dimensions_mm": [
+        178.1668086051941,
+        178.19048964977264,
+        40.314186096191406
+      ],
+      "fits_180mm_square": true,
+      "rests_on_z0": true,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_components": 1,
+      "signed_volume_ml": 293.5896316389077,
+      "watertight": true,
+      "positive_volume": true,
+      "pass": true
+    },
+    "02_mold_upper_MINI_DIAGONAL": {
+      "triangle_count_stl": 108496,
+      "triangle_count_3mf": 108496,
+      "zero_area_triangles_removed_by_stl_importer": 0,
+      "topology_check_note": "Topology checked after normal STL importer discards zero-area triangles and coincident vertices are welded at 0.000001 mm",
+      "max_stl_3mf_triangle_coordinate_error_mm": 7.671093754879621e-06,
+      "stl_3mf_same_triangles": true,
+      "3mf_units": "millimeter",
+      "bounds_mm": [
+        [
+          0.9165959358215332,
+          0.904755711555481,
+          0.0
+        ],
+        [
+          179.08340454101562,
+          179.09524536132812,
+          45.41342544555664
+        ]
+      ],
+      "dimensions_mm": [
+        178.1668086051941,
+        178.19048964977264,
+        45.41342544555664
+      ],
+      "fits_180mm_square": true,
+      "rests_on_z0": true,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "connected_components": 1,
+      "signed_volume_ml": 464.15426325464614,
+      "watertight": true,
+      "positive_volume": true,
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

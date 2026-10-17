@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "assumed_full_cone_deg": 25,
+  "assumed_aperture_mm": 4,
+  "assumed_optical_face_local_x_mm": 4,
+  "optical_face_global_mm": [
+    41,
+    0,
+    17.1
+  ],
+  "nominal_contact_slant_range_mm": 16.6,
+  "centreline_contact_point_mm": [
+    57.6,
+    0,
+    17.1
+  ],
+  "inward_angle_deg": 0,
+  "checks": [
+    {
+      "part": "01_pi_base",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "02_pi_lid",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "03_camera_bulkhead",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "04_contact_hood_35mm",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "06_filter_retainer",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "07_grip_insert_half",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "08_grip_screw_half",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "09_angled_saddle",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "22_battery_roof",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "23_battery_tray",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "24_battery_rear_cover",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "25_connector_access_cover",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "12_button_backplate",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "13_button_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "14_button_cap",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "15_switch_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "16_switch_shim_0p4_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "05_filter_carrier_zomei_33x6",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "17_tof_cradle",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "18_tof_edge_clamp_print_2",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "19_power_pod",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "20_power_panel",
+      "overlap_mm3": 0
+    },
+    {
+      "part": "21_led_retainer",
+      "overlap_mm3": 0
+    }
+  ],
+  "limitations": [
+    "Sensor model, active optical centre and actual field of view unconfirmed.",
+    "Clearance of a hypothetical cone is not proof of successful ranging.",
+    "17x7x1 denotes PCB only; connector envelopes are explicit allowances to compare to real hardware.",
+    "Range-to-camera-distance conversion assumes a planar phantom normal to the barrel."
+  ]
+}

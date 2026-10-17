@@ -1,0 +1,91 @@
+{
+  "units": "millimeter",
+  "method": "Blender BVHTree exact triangle nearest distance for every welded mesh vertex and every triangle centroid in both directions; exhaustive three-direction ray-parity containment of bone vertices and triangle centroids",
+  "bone": {
+    "vertices": 143555,
+    "triangles": 287102,
+    "nonmanifold_edges": 0,
+    "volume_ml": 63.78177922266329
+  },
+  "skin": {
+    "vertices": 112623,
+    "triangles": 225242,
+    "nonmanifold_edges": 0,
+    "volume_ml": 600.4928124269611
+  },
+  "requested_clearance_mm": 10.0,
+  "sets": {
+    "skin_vertices_to_bone": {
+      "count": 112623,
+      "minimum_mm": 10.15999698638916,
+      "percentiles_mm": {
+        "p1": 10.255698165893556,
+        "p5": 10.3177059173584,
+        "p50": 10.49444580078125,
+        "p95": 14.643783473968503,
+        "p99": 19.06516212463378
+      },
+      "below_10mm_count": 0,
+      "examples_below_10mm": []
+    },
+    "skin_triangle_centroids_to_bone": {
+      "count": 225242,
+      "minimum_mm": 10.138741493225098,
+      "percentiles_mm": {
+        "p1": 10.252132081985474,
+        "p5": 10.314805030822754,
+        "p50": 10.495384216308594,
+        "p95": 14.644497537612914,
+        "p99": 19.060048446655273
+      },
+      "below_10mm_count": 0,
+      "examples_below_10mm": []
+    },
+    "bone_vertices_to_skin": {
+      "count": 143555,
+      "minimum_mm": 10.13370418548584,
+      "percentiles_mm": {
+        "p1": 10.359026184082031,
+        "p5": 10.54217987060547,
+        "p50": 13.590291976928711,
+        "p95": 21.86833343505859,
+        "p99": 24.633115463256836
+      },
+      "below_10mm_count": 0,
+      "examples_below_10mm": [],
+      "maximum_signed_distance_mm": -10.133477376657538,
+      "outside_examples": []
+    },
+    "bone_triangle_centroids_to_skin": {
+      "count": 287102,
+      "minimum_mm": 10.151030540466309,
+      "percentiles_mm": {
+        "p1": 10.381445989608764,
+        "p5": 10.548629808425904,
+        "p50": 13.592445373535156,
+        "p95": 21.873868370056154,
+        "p99": 24.63463779449463
+      },
+      "below_10mm_count": 0,
+      "examples_below_10mm": [],
+      "maximum_signed_distance_mm": -10.148273479193449,
+      "outside_examples": []
+    }
+  },
+  "containment_ray_validation": {
+    "bone_vertices_and_centroids_sampled": 430657,
+    "directions_per_point": 3,
+    "any_direction_disagrees": 10,
+    "outside_by_majority_count": 0,
+    "outside_by_majority_examples": []
+  },
+  "minimum_measured_clearance_mm": 10.13370418548584,
+  "all_measured_clearances_at_least_10mm": true,
+  "bone_inside_skin": true,
+  "nearest_normal_note": "Nearest-face signed distances are diagnostic only: thin/degenerate triangles and sharp-edge nearest points can give an ambiguous sign. Containment is decided independently by ray parity in three non-axis-aligned directions.",
+  "elapsed_seconds": 24.252211809158325,
+  "input_sha256": {
+    "skin": "35255048557d6e4843aba32dc6a2c314ec78aa8f67229f246c5416469e81be21",
+    "bone": "5698af553c3849d1f3ef104956046e529f9c524041c17508725c934c86d1e72f"
+  }
+}

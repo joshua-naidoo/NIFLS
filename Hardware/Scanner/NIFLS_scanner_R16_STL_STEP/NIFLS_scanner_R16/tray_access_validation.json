@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "centre_xy_mm": [
+        -108,
+        -17
+      ],
+      "old_obstruction_mm3": 0,
+      "new_obstruction_mm3": 0,
+      "access_diameter_mm": 6.2,
+      "screw_head_diameter_mm": 5.5
+    },
+    {
+      "centre_xy_mm": [
+        -108,
+        17
+      ],
+      "old_obstruction_mm3": 552.6179287388954,
+      "new_obstruction_mm3": 0,
+      "access_diameter_mm": 6.2,
+      "screw_head_diameter_mm": 5.5
+    },
+    {
+      "centre_xy_mm": [
+        -38,
+        -17
+      ],
+      "old_obstruction_mm3": 0,
+      "new_obstruction_mm3": 0,
+      "access_diameter_mm": 6.2,
+      "screw_head_diameter_mm": 5.5
+    },
+    {
+      "centre_xy_mm": [
+        -38,
+        17
+      ],
+      "old_obstruction_mm3": 552.6179287388956,
+      "new_obstruction_mm3": 0,
+      "access_diameter_mm": 6.2,
+      "screw_head_diameter_mm": 5.5
+    }
+  ],
+  "seat_region_change_mm3": 0.0,
+  "removed_volume_mm3": 1404.471615254326,
+  "access_with": "Roof and battery removed; 2.5 mm hex key with at least 35 mm straight reach.",
+  "limitations": [
+    "Physical insertion, print tolerances and joint strength not tested.",
+    "3 mm insert substitution is not mechanically load-tested."
+  ]
+}
