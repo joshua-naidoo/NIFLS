@@ -1,5 +1,9 @@
 """
-NIFLS real-time triage dashboard (v4)
+NIFLS real-time triage dashboard (host side)
+
+Receives frames from the Raspberry Pi over imagezmq (TCP port 5555), runs the U-Net,
+filters detections over several frames and shows them on a live dashboard.
+Research prototype tested on a phantom only; not a medical device.
 
 Mouse
   Click a thumbnail in "Recent detections", or the fracture box in the live feed,
@@ -28,7 +32,7 @@ from collections import deque
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 
-# ---- Sharpness fix #1: stop Windows from bitmap-stretching the window on scaled displays ----
+# Stop Windows from bitmap-stretching the window on scaled displays (keeps text sharp)
 if sys.platform.startswith("win"):
     try:
         import ctypes
@@ -38,6 +42,14 @@ if sys.platform.startswith("win"):
             ctypes.windll.user32.SetProcessDPIAware()
         except Exception:
             pass
+
+# ==========================================
+# CONFIGURATION
+# ==========================================
+HERE = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(HERE, "nifls_unet_best.vbb")   # U-Net weights (state_dict)
+SAVE_DIR = os.path.join(HERE, "nifls_captures")          # screenshots and saved detections
+PORT = 5555                                              # imagezmq listening port
 
 # ==========================================
 # SETUP & MODEL LOADING
@@ -57,10 +69,14 @@ model = smp.Unet(
     classes=1,
     activation="sigmoid",
 ).to(device)
-model.load_state_dict(torch.load('nifls_unet_best.vbb', map_location=device))
+try:
+    state_dict = torch.load(MODEL_PATH, map_location=device, weights_only=True)
+except TypeError:   # older PyTorch without the weights_only argument
+    state_dict = torch.load(MODEL_PATH, map_location=device)
+model.load_state_dict(state_dict)
 model.eval()
 
-image_hub = imagezmq.ImageHub(open_port='tcp://*:5555')
+image_hub = imagezmq.ImageHub(open_port=f'tcp://*:{PORT}')
 clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
 
 # Shared asynchronous state
@@ -73,7 +89,7 @@ latest_infer_ms = 0.0
 lock = threading.Lock()
 is_running = True
 
-# Diagnostic parameters (unchanged)
+# Detection parameters
 REQUIRED_STABILITY_FRAMES = 5
 MIN_FRACTURE_AREA = 300
 MASK_THRESHOLD = 0.85
@@ -97,7 +113,6 @@ THUMB = 168
 WIN = "NIFLS Real-Time Triage"
 LANCZOS = getattr(Image, "Resampling", Image).LANCZOS
 BOX = getattr(Image, "Resampling", Image).BOX
-SAVE_DIR = "nifls_captures"
 
 
 def rgb(h):
@@ -117,7 +132,6 @@ WARN = rgb('#F5B84B')
 ALERT = rgb('#FF5C5C')
 ACCENT = rgb('#6CB8FF')
 
-HERE = os.path.dirname(os.path.abspath(__file__))
 REG_PATHS = [
     os.path.join(HERE, "fonts", "Inter-Regular.ttf"), os.path.join("fonts", "Inter-Regular.ttf"),
     os.path.join(HERE, "Inter-Regular.ttf"),
@@ -818,7 +832,7 @@ def inference_worker():
 threading.Thread(target=inference_worker, daemon=True).start()
 
 # ==========================================
-# WINDOW (Sharpness fix #2: render at the window's real pixel size)
+# WINDOW (rendered at the window's real pixel size so OpenCV never rescales it)
 # ==========================================
 def screen_size():
     try:
@@ -863,7 +877,7 @@ sw, sh = screen_size()
 s0 = min((sw - 40) / CANVAS_W, (sh - 140) / CANVAS_H, 1.0)
 cv2.resizeWindow(WIN, int(CANVAS_W * s0), int(CANVAS_H * s0))
 cv2.setMouseCallback(WIN, on_mouse)
-print("Listening for optimized NIFLS hardware stream on port 5555...")
+print(f"Listening for the NIFLS hardware stream on port {PORT}...")
 
 # ==========================================
 # SESSION STATE
@@ -873,7 +887,6 @@ fracture_total = 0
 was_certain = False
 history = deque(maxlen=HIST_LEN)
 disp_conf = 0.0
-fps = 0.0
 prev_t = time.time()
 fullscreen = False
 
@@ -941,7 +954,7 @@ while True:
     ui_fps = 0.9 * ui_fps + 0.1 * (1.0 / max(now - prev_t, 1e-6))
     prev_t = now
 
-    # ---- Filtering (unchanged logic). Runs once per camera frame, not once per redraw ----
+    # ---- Filtering: runs once per camera frame, not once per redraw ----
     if new_frame:
         last_fid = fid
         history.append(current_peak)

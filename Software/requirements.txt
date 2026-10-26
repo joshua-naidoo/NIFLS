@@ -1,0 +1,23 @@
+# NIFLS host laptop requirements (Windows or Linux)
+# Install with:  pip install -r requirements.txt
+# A CUDA GPU is optional; the CPU build of PyTorch also works.
+
+# Live dashboard (Software/experiment 4/host_dashboard.py) and timed dashboard (experiment 3)
+torch
+torchvision
+segmentation-models-pytorch
+opencv-python
+numpy
+pillow
+imagezmq
+
+# Training and cross-validation (Software/experiment 4/train_unet.py)
+scikit-learn
+
+# Latency analysis (Software/experiment 3/analyze_latency.py)
+pandas
+matplotlib
+
+# Raspberry Pi (pi_streamer.py) is NOT installed from this file. On the Pi, use:
+#   sudo apt install python3-picamera2 python3-opencv python3-numpy
+#   pip install imagezmq

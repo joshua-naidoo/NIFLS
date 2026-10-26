@@ -1,6 +1,6 @@
 # NIFLS: Non-Invasive Fracture Light Scanner (`nifls_interface`)
 
-A low-cost, non-ionizing optical transillumination system for bone fracture triage, built as a final-year project (EEE4022S) at the University of Cape Town.
+A low-cost, non-ionising optical transillumination system for bone fracture triage, built as a final-year project (EEE4022S) at the University of Cape Town.
 
 A 940 nm LED baseplate lights a hand from below, a Raspberry Pi camera head images the transmitted light, and a laptop runs a U-Net to segment the fracture and show it on a live dashboard.
 
@@ -56,17 +56,23 @@ NIFLS/
 │   ├── Phantom/                   Tissue-mimicking silicone–TiO₂ hand phantom and 3D-printed bone core
 │   └── Scanner/                   Handheld camera head (Raspberry Pi 4B + NoIR Camera Module 3)
 ├── Software/
+│   ├── requirements.txt           Python packages for the host laptop
 │   ├── experiment 3/              Latency experiment
+│   │   ├── pi_streamer_timed.py       Pi streamer with per-stage timing and clock calibration
 │   │   ├── host_dashboard_timed.py    Laptop dashboard with per-stage timing log
 │   │   ├── host_latency_log.csv       Raw per-frame timings from the 531-frame run
 │   │   ├── analyze_latency.py         Latency table and breakdown figure
 │   │   ├── exp3_latency_breakdown.png Figure used in the report
 │   │   └── exp3_table_rows.tex        Table rows used in the report
 │   └── experiment 4/              Segmentation experiment and live dashboard
-│       ├── host_inference.py          Laptop receiver, U-Net inference and dashboard
+│       ├── pi_streamer.py             Raspberry Pi camera streamer (edge node)
+│       ├── host_dashboard.py          Laptop receiver, U-Net inference and dashboard
+│       ├── train_unet.py              U-Net training and 5-fold cross-validated evaluation
+│       ├── annotations_v3_std.json    Fracture polygon labels (COCO format) for the training frames
 │       ├── nifls_unet_best.vbb        U-Net weights loaded by the dashboard
 │       ├── nifls_unet_v3.pth          U-Net weights, final model trained on all labelled frames
-│       └── nifls_captures/            Captured frames
+│       ├── nifls_captures/            Captured frames
+│       └── training_images/           Images used to train the U-Net
 └── README.md
 ```
 
@@ -76,32 +82,41 @@ NIFLS/
 
 **Raspberry Pi 4B** (Raspberry Pi OS, libcamera stack): Python 3.11, `picamera2`, OpenCV, `imagezmq`, NumPy.
 
-**Host laptop** (Windows or Linux): Python 3, PyTorch (CUDA GPU optional, CPU works), `segmentation_models_pytorch`, OpenCV, Pillow, NumPy, `imagezmq`; `pandas` and `matplotlib` for the analysis scripts.
+**Host laptop** (Windows or Linux): Python 3, PyTorch (CUDA GPU optional, CPU works), `segmentation_models_pytorch`, OpenCV, Pillow, NumPy, `imagezmq`; `pandas` and `matplotlib` for the analysis scripts; `scikit-learn` for training.
 
 ```bash
-pip install torch segmentation-models-pytorch opencv-python pillow numpy imagezmq pandas matplotlib
+pip install -r Software/requirements.txt
 ```
 
-On the Pi, install `picamera2` through the system package manager (`sudo apt install python3-picamera2`) rather than pip.
+On the Pi, install `picamera2` through the system package manager (`sudo apt install python3-picamera2`) rather than pip, and install `imagezmq` with pip.
 
 ## Running the live system
 
 1. Put the phantom (or hand) on the LED baseplate and switch the baseplate on. Use dim room lights so only the 940 nm LEDs illuminate the scene.
-2. On the laptop, start the dashboard first: `python "Software/experiment 4/host_inference.py"`. It listens on port 5555 and loads the U-Net weights (`nifls_unet_best.vbb`).
-3. On the Pi, start the streaming script. It connects to the laptop by network name, so no fixed IP address is needed. `TODO: name the Pi streaming script and where it lives in the repository.`
+2. On the laptop, start the dashboard first: `python "Software/experiment 4/host_dashboard.py"`. It listens on port 5555 and loads the U-Net weights (`nifls_unet_best.vbb`).
+3. On the Pi, start the streaming script: `python3 "Software/experiment 4/pi_streamer.py"`. It connects to the laptop by network name, so no fixed IP address is needed. Edit `SERVER` at the top of the script to your laptop's network name.
 4. Hold the camera head above the baseplate. Frames stream at up to 30 FPS and a confirmed detection is outlined with a confidence value.
 
 Both machines must be on the same local network. The send is a blocking request/reply, so the Pi stalls if the laptop disappears mid-session (a send timeout with reconnection is listed as future work).
 
 ## Reproducing the experiments
 
-**Experiment 3 (latency).** Run the timed dashboard (`Software/experiment 3/host_dashboard_timed.py`) on the laptop and the timed streamer on the Pi, then run `analyze_latency.py` on the merged Pi and host logs. The per-frame laptop log from the reported run is `host_latency_log.csv`. `TODO: add the timed Pi streamer to the repository, or state where it is.`
+**Experiment 3 (latency).** Run the timed dashboard (`Software/experiment 3/host_dashboard_timed.py`) on the laptop and the timed streamer (`Software/experiment 3/pi_streamer_timed.py`) on the Pi, then run `analyze_latency.py` on the merged Pi and host logs. The per-frame laptop log from the reported run is `host_latency_log.csv`.
 
-**Experiment 4 (segmentation).** The trained weights and the captured frames are in `Software/experiment 4/`. The 5-fold cross-validation training and evaluation scripts, and the label files, are not in the repository at the moment. `TODO: add them, or delete this note.`
+**Experiment 4 (segmentation).** The trained weights, the captured frames, the training images (`training_images/`), the labels (`annotations_v3_std.json`) and the training script (`train_unet.py`) are in `Software/experiment 4/`. From the repository root, run:
+
+```bash
+python "Software/experiment 4/train_unet.py" \
+    --images "Software/experiment 4/training_images" \
+    --annotations "Software/experiment 4/annotations_v3_std.json" \
+    --out results
+```
+
+The script runs 5-fold stratified cross-validation (every frame is scored once, out-of-fold), prints the Dice, IoU, precision, recall and false-detection results at thresholds 0.5 and 0.85, and then trains a final model on all usable frames. It writes `exp4_v3_cv_per_frame.csv`, `exp4_v3_qualitative.png` and `nifls_unet_v3.pth` to `results/`. Of the 56 annotated frames, 53 are used, because three have most of the fracture outside the 1200 px centre crop. A CUDA GPU is recommended, and the ImageNet encoder weights are downloaded on first use. On Windows, set `NUM_WORKERS = 0` in the script.
 
 ## Data
 
-Captured frames are in `Software/experiment 4/nifls_captures/`. `TODO: state whether the annotations are available, or that they are available on request.`
+Captured frames are in `Software/experiment 4/nifls_captures/` and the images used to train the U-Net are in `Software/experiment 4/training_images/`. The fracture annotations (polygon labels in COCO format, standardised) are in `Software/experiment 4/annotations_v3_std.json`. Frames with no annotation are used as empty-mask negatives.
 
 ## Limitations
 
