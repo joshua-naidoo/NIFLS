@@ -38,7 +38,7 @@ Key design choices:
 | Measurement | Result |
 |---|---|
 | Effective attenuation of phantom at 940 nm | 1.1 ± 0.2 cm⁻¹ over 27–47 mm |
-| Dry 1.5 mm gap, Michelson contrast | 0.10 against 0.02 for an intact control (one frame each) |
+| Dry 1.5 mm gap, Michelson contrast | 0.09 ± 0.03 against 0.04 ± 0.02 for an intact control (one frame each) |
 | End-to-end latency, camera to display (531 frames) | 401.3 ± 71.5 ms mean; 530 of 531 frames below 1.0 s |
 | U-Net Dice, 5-fold cross-validation (53 fracture frames) | 0.735 ± 0.201 at threshold 0.5 (0.728 at 0.85); target 0.70 |
 | Fractures detected / false detections | 51 of 53 / 7 of 56 fracture-free frames at 0.85 |
@@ -57,6 +57,17 @@ NIFLS/
 │   └── Scanner/                   Handheld camera head (Raspberry Pi 4B + NoIR Camera Module 3)
 ├── Software/
 │   ├── requirements.txt           Python packages for the host laptop
+│   ├── experiment 1/              Attenuation experiment
+│   │   ├── exp1_attenuation.py        Measures the ROI grey levels, fits mu_eff, draws the fit figure
+│   │   ├── frames.csv                 Region, thickness and image file for each frame
+│   │   ├── exp1_*.jpg                 The nine frames analysed (pinky x2, index, thumb, middle fingertip,
+│   │   │                              middle finger, upper palm a and b, palm)
+│   │   └── results/                   Output: exp1_fit.csv and exp1_attenuation_fit.png
+│   ├── experiment 2/              Fracture-gap contrast experiment
+│   │   ├── exp2_gap_contrast.py       Michelson contrast and maximum gradient across the gap
+│   │   ├── gap.jpg                    Frame with the dry 1.5 mm gap (index finger)
+│   │   ├── control.jpg                Frame of intact bone (middle finger)
+│   │   └── results/                   Output: summary .json files, per-position .csv, profile figures
 │   ├── experiment 3/              Latency experiment
 │   │   ├── pi_streamer_timed.py       Pi streamer with per-stage timing and clock calibration
 │   │   ├── host_dashboard_timed.py    Laptop dashboard with per-stage timing log
@@ -100,6 +111,23 @@ On the Pi, install `picamera2` through the system package manager (`sudo apt ins
 Both machines must be on the same local network. The send is a blocking request/reply, so the Pi stalls if the laptop disappears mid-session (a send timeout with reconnection is listed as future work).
 
 ## Reproducing the experiments
+
+**Experiment 1 (attenuation).** From `Software/experiment 1/`, run:
+
+```bash
+python exp1_attenuation.py frames.csv --images-dir . --out results
+```
+
+The script resizes each frame to 2576 px wide, takes the mean grey level over a 150 × 150 px region centred on the brightest point of the Gaussian-smoothed frame (σ = 25 px), averages the two pinky frames, raises the grey levels to the power 2.2, and fits −ln(I/I_pinky) against thickness. It prints the table and μ_eff ± the standard error of the slope (about 1.1 ± 0.2 cm⁻¹, R² about 0.88), and writes `exp1_fit.csv` and `exp1_attenuation_fit.png` to `results/`. The first region in `frames.csv` is the reference (the pinky).
+
+**Experiment 2 (fracture contrast).** From `Software/experiment 2/`, run:
+
+```bash
+python exp2_gap_contrast.py gap.jpg --box 1017 1264 527 654 \
+    --control control.jpg --control-box 1070 1332 440 1032 --out results/exp2
+```
+
+Frames of any size are resized to 2576 px wide first, and the box coordinates refer to that width. The script takes a lightly smoothed intensity profile (σ = 3 px) along the finger axis at every column of the box, aligns them on their peaks, and reports the mean and sample standard deviation of the Michelson contrast over the profiles, the mean maximum gradient, and the peak-aligned profile figure (`exp2_comparison.png`). It should give a gap contrast of about 0.09 ± 0.03 and a control contrast of about 0.04 ± 0.02. The box coordinates must lie inside the region analysed, so use frames without any drawn marker.
 
 **Experiment 3 (latency).** Run the timed dashboard (`Software/experiment 3/host_dashboard_timed.py`) on the laptop and the timed streamer (`Software/experiment 3/pi_streamer_timed.py`) on the Pi, then run `analyze_latency.py` on the merged Pi and host logs. The per-frame laptop log from the reported run is `host_latency_log.csv`.
 
