@@ -1,0 +1,11 @@
+{
+  "image": "gap.jpg",
+  "positions": 247,
+  "peak_grey_mean": 92.92586842364199,
+  "flank_grey_mean": 77.93364236851605,
+  "michelson_mean": 0.09263294399857126,
+  "michelson_sd": 0.034091308859383336,
+  "max_gradient_mean_grey_per_px": 1.590618206227578,
+  "max_gradient_sd": 0.6524485972445755,
+  "fwhm_px_mean": 30.008097165991902
+}

@@ -1,0 +1,10 @@
+{
+  "positions": 22,
+  "peak_grey_mean": 97.23657595989494,
+  "flank_grey_mean": 88.93354751559274,
+  "michelson_mean": 0.04448569830041363,
+  "michelson_sd": 0.020112164081676688,
+  "max_gradient_mean_grey_per_px": 0.8734205542056724,
+  "max_gradient_sd": 0.20430134234817696,
+  "fwhm_px_mean": 32.22727272727273
+}
