@@ -58,16 +58,23 @@ NIFLS/
 ├── Software/
 │   ├── requirements.txt           Python packages for the host laptop
 │   ├── experiment 1/              Attenuation experiment
+│   │   ├── results/                   Output: exp1_fit.csv and exp1_attenuation_fit.png
 │   │   ├── exp1_attenuation.py        Measures the ROI grey levels, fits mu_eff, draws the fit figure
 │   │   ├── frames.csv                 Region, thickness and image file for each frame
-│   │   ├── exp1_*.jpg                 The nine frames analysed (pinky x2, index, thumb, middle fingertip,
-│   │   │                              middle finger, upper palm a and b, palm)
-│   │   └── results/                   Output: exp1_fit.csv and exp1_attenuation_fit.png
+│   │   ├── exp1_index.jpg             Index finger (32 mm)
+│   │   ├── exp1_middle_finger.jpg     Middle finger (36 mm)
+│   │   ├── exp1_middle_fingertip.jpg  Middle fingertip (32 mm)
+│   │   ├── exp1_palm.jpg              Palm (47 mm)
+│   │   ├── exp1_pinky.jpg             Pinky, first frame (27 mm)
+│   │   ├── exp1_pinky_frame1.jpg      Pinky, second frame (27 mm)
+│   │   ├── exp1_thumb.jpg             Thumb (32 mm)
+│   │   ├── exp1_upper_palm_a.jpg      Upper palm (a) (42 mm)
+│   │   └── exp1_upper_palm_b.jpg      Upper palm (b) (40 mm)
 │   ├── experiment 2/              Fracture-gap contrast experiment
-│   │   ├── exp2_gap_contrast.py       Michelson contrast and maximum gradient across the gap
-│   │   ├── gap.jpg                    Frame with the dry 1.5 mm gap (index finger)
+│   │   ├── results/                   Output: summary .json files, per-position .csv, profile figures
 │   │   ├── control.jpg                Frame of intact bone (middle finger)
-│   │   └── results/                   Output: summary .json files, per-position .csv, profile figures
+│   │   ├── exp2_gap_contrast.py       Michelson contrast and maximum gradient across the gap
+│   │   └── gap.jpg                    Frame with the dry 1.5 mm gap (index finger)
 │   ├── experiment 3/              Latency experiment
 │   │   ├── pi_streamer_timed.py       Pi streamer with per-stage timing and clock calibration
 │   │   ├── host_dashboard_timed.py    Laptop dashboard with per-stage timing log
