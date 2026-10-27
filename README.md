@@ -94,8 +94,6 @@ NIFLS/
 └── README.md
 ```
 
-> The contents of `Hardware/` are described by folder name only; edit the one-line descriptions above to list what each folder actually holds.
-
 ## Requirements
 
 **Raspberry Pi 4B** (Raspberry Pi OS, libcamera stack): Python 3.11, `picamera2`, OpenCV, `imagezmq`, NumPy.
@@ -163,8 +161,6 @@ Captured frames are in `Software/experiment 4/nifls_captures/` and the images us
 ## Acknowledgements
 
 Supervisor: Dr Simon Winberg, University of Cape Town.
-
-## Licence
 
 ## Contact
 
